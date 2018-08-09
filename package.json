@@ -1,0 +1,22 @@
+{
+  "name": "ulord-to-usc-key-utils",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ulord-to-usc-key-utils",
+  "main": "ulord-to-usc-key-utils.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bs58": "3.0.0",
+    "convert-hex": "latest",
+    "copy-webpack-plugin": "latest",
+    "ethereumjs-wallet": "latest",
+    "jquery": "latest",
+    "js-sha256": "latest",
+    "json-loader": "latest"
+  },
+  "devDependencies": {
+    "simpleunit": "0.0.7"
+  }
+}

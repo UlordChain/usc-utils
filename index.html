@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="lib/usc-conversion-utils.js"></script>
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="lib/usc-helper.js"></script>
+    <title>USC Convertion Utils</title>
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body id="page-top" class="index">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/">
+                    <img src="img/USCLOGOBN_daykpx.png" >
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+						<h1> From ULD to USC key</h1>
+						<h3> ULD Private key: </h3>
+						<input id="toUscInput" size="60">
+						<button id="toUscBtn" type='button'>Transform!</button> 
+						<div id="toUscResult"></div>
+					</div>
+					<br/><br/><br/>
+					<div>
+						<h1> From USC to ULD key</h1>
+						<h3> USC Private key: </h3>
+						<input id="toUldInput" size="70">
+						<select id="uldNet">
+							<option value="TEST_NET" selected="selected">Test Net</option>
+							<option value="MAIN_NET">Main Net</option>
+						</select> 
+						<button id="toUldBtn" type='button'>Transform!</button> 
+						<div id="toUldResult"></div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div >
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/Ulord-225365864705246/" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a></li>                            
+                            <li><a href="http://www.ulord.one" class="btn-social btn-outline"><i class="fa fa-fw fa-rss"></i></a></li>
+                            <li><a href="https://github.com/UlordChain/Ulord-Sidechain" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a></li>				    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
