@@ -98,7 +98,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #DCECD0;
+  background: #333333;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -296,7 +296,7 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 15px;
-  background-color: #61676E;
+  background-color: #333333;
 }
 footer .footer-col {
   margin-bottom: 50px;
@@ -497,3 +497,11 @@ fieldset[disabled] .btn-success.active {
   opacity: 0;
   display: none;
 }
+
+.btn-gray{
+  background: #535B76;
+  color: white;
+  width: 96px;
+  height: 28px;
+}
+
