@@ -1,5 +1,6 @@
 # usc-utils
 
+For converting Ulord private key to Ulord-Sidechain private key and vice-versa.
 
 # How to build the browser application.
 
