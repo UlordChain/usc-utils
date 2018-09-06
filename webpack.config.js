@@ -5,9 +5,10 @@ module.exports = {
     entry: "./usc-conversion-utils.js",
     output: {
         path: __dirname + '/build/lib',
-		filename: 'usc-conversion-utils.js',
-		libraryTarget: 'var',
-		library: 'USCUtils'
+	filename: 'usc-conversion-utils.js',
+	libraryTarget: 'var',
+	library: 'USCUtils',
+	publicPath: "lib/"
     },
     module: {
         rules: [

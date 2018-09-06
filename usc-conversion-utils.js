@@ -5,7 +5,7 @@ var sha256 = require('js-sha256');
 
 function keyUldToUscInBytes(privKeyAsExportedByUlordDumpprivkey) {
     var decodedKey = bs58.decode(privKeyAsExportedByUlordDumpprivkey);
-    var privKeyBytes = decodedKey.slice(1, decodedKey.length - 5);
+	var privKeyBytes = decodedKey.slice(1, decodedKey.length - 5);
     return privKeyBytes;
 }
 
@@ -19,6 +19,11 @@ function getUscAddress(uldPrivateKey) {
 	var myWallet = wallet.fromPrivateKey(new Buffer(keyUldToUscInBytes(uldPrivateKey)));
 	var addressInUscFormat = myWallet.getAddress();
 	return addressInUscFormat.toString('hex');
+}
+
+function getUscKeystore(uldPrivateKey, password){
+	var myWallet = wallet.fromPrivateKey(new Buffer(keyUldToUscInBytes(uldPrivateKey)));
+	return myWallet.toV3String(password);
 }
 
 function getUldPrivateKey(uldNet, uscAddress) {
@@ -56,6 +61,9 @@ module.exports = {
 	},
 	getUldPrivateKey: function (uldNet, uscAddress) {
 		return getUldPrivateKey(uldNet, uscAddress);
+	},
+	getUscKeystore: function(uldPrivateKey, password){
+		return getUscKeystore(uldPrivateKey, password);
 	}
 };
 

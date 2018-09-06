@@ -10,6 +10,20 @@ $(document).ready(function(){
 		}
 	});
 
+	$( "#toUscKeystore" ).click(function() {
+		try {
+			var privKey = $( "#toUscInput" ).val();
+			var password = $( "#keystorePassword" ).val();
+			console.log(privKey, password);
+			var keystoreContent = USCUtils.getUscKeystore(privKey, password);
+			console.log(privKey, password, keystoreContent);
+			$("#keystoreVal").val(keystoreContent);
+		} catch(err) {
+			console.log(err);
+			$("#keystoreVal").val(err.message);
+		}
+	});
+
 	$( "#toUldBtn" ).click(function() {
 		try {
 			var privKey = $( "#toUldInput" ).val();
