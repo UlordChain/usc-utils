@@ -505,3 +505,10 @@ fieldset[disabled] .btn-success.active {
   height: 28px;
 }
 
+#toUscResult > h3 {
+  font-size: 14px;
+}
+
+#toUldResult > h3 {
+  font-size: 14px;
+}

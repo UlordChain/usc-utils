@@ -21,6 +21,12 @@ function getUscAddress(uldPrivateKey) {
 	return addressInUscFormat.toString('hex');
 }
 
+function getUscPubKey(uldPrivateKey) {
+	var myWallet = wallet.fromPrivateKey(new Buffer(keyUldToUscInBytes(uldPrivateKey)));
+	var uscPubKey = myWallet.getPublicKey();
+	return uscPubKey.toString('hex');
+}
+
 function getUscKeystore(uldPrivateKey, password){
 	var myWallet = wallet.fromPrivateKey(new Buffer(keyUldToUscInBytes(uldPrivateKey)));
 	return myWallet.toV3String(password);
@@ -61,6 +67,9 @@ module.exports = {
 	},
 	getUldPrivateKey: function (uldNet, uscAddress) {
 		return getUldPrivateKey(uldNet, uscAddress);
+	},
+	getUscPubKey: function(uldPrivateKey){
+		return getUscPubKey(uldPrivateKey);
 	},
 	getUscKeystore: function(uldPrivateKey, password){
 		return getUscKeystore(uldPrivateKey, password);

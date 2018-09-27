@@ -4,7 +4,8 @@ $(document).ready(function(){
 			var privKey = $( "#toUscInput" ).val();
 			var privKeyInUscFormat = USCUtils.privKeyToUscFormat(privKey);
 			var uscAddress = USCUtils.getUscAddress(privKey);
-			$("#toUscResult").html('<h3>USC Private Key: ' + privKeyInUscFormat + '</h3><h3>USC Address: ' + uscAddress + '</h3>');
+			var uscPubKey = USCUtils.getUscPubKey(privKey);
+			$("#toUscResult").html('<h3>USC Private Key: ' + privKeyInUscFormat + '</h3><h3>USC Public Key: ' + uscPubKey +'</h3><h3>USC Address: ' + uscAddress + '</h3>');
 		} catch(err) {
 			$("#toUscResult").html('<h3 class="has-error">' + err.message + '</h3>');
 		}
@@ -14,12 +15,9 @@ $(document).ready(function(){
 		try {
 			var privKey = $( "#toUscInput" ).val();
 			var password = $( "#keystorePassword" ).val();
-			console.log(privKey, password);
 			var keystoreContent = USCUtils.getUscKeystore(privKey, password);
-			console.log(privKey, password, keystoreContent);
 			$("#keystoreVal").val(keystoreContent);
 		} catch(err) {
-			console.log(err);
 			$("#keystoreVal").val(err.message);
 		}
 	});
