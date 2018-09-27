@@ -24,7 +24,7 @@ function getUscAddress(uldPrivateKey) {
 function getUscPubKey(uldPrivateKey) {
 	var myWallet = wallet.fromPrivateKey(new Buffer(keyUldToUscInBytes(uldPrivateKey)));
 	var uscPubKey = myWallet.getPublicKey();
-	return uscPubKey.toString('hex');
+	return "04" + uscPubKey.toString('hex');
 }
 
 function getUscKeystore(uldPrivateKey, password){
